@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/Main.css"/>
+  </head>
+  <body>
+    <div class="main">
+      <div class="END"><h2>아직안함</h2><br></div>
+      <div class="BMI"><h2>.</h2></div>
+    </div>
+    <div id="nameModal" class="modal">
+      <div class="modal-content">
+        <h2>이름을 입력해주세요</h2>
+        <input type="text" id="username" placeholder="이름 입력" />
+        <button id="bu" onclick="startApp()">시작하기</button>
+      </div>
+    </div>
+    <img
+      src="https://data.0app0.com/diet/board/3173/p_20170929110348_6599599730.jpg"
+      id="img"
+      style="display: none"
+    />
+    <form id="bmiForm" style="display: none" onsubmit="showResult(event)">
+      <h1 class="head">bmi 계산기</h1>
+      <div class="all">
+        <div class="H">
+          <label for="height">키 (cm):</label>
+          <input type="number" step="any" id="height" name="height" required />
+        </div>
+        <div class="W">
+          <label for="weight">몸무게 (kg):</label>
+          <input type="number" step="any" id="weight" name="weight" required />
+        </div>
+      </div>
+      <div class="button">
+        <button type="submit" onclick="showResult()">계산하기</button>
+      </div>
+    </form>
+    <script src="/static/Main.js"></script>
+  </body>
+</html>
