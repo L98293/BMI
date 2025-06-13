@@ -59,7 +59,8 @@ function showResult(event) {
       } else if (bmi<= 30) {
         document.querySelector(".BMI h2").innerText = "비만입니다.";
       } else {
-        document.querySelector(".BMI h2").innerText = "병원에 한번가보세요.";
+        document.querySelector(".BMI h2").innerHTML = `<a href="https://ddocdoc.com/" target="_blank">병원에 한번 가보세요.</a>`;
+        // document.querySelector(".hospital").style.display = "block"
       }
     })
 
